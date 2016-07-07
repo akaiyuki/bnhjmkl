@@ -32,6 +32,7 @@ import com.smartwave.taskr.core.BaseActivity;
 import com.smartwave.taskr.core.DBHandler;
 import com.smartwave.taskr.core.SharedPreferencesCore;
 import com.smartwave.taskr.fragment.ProfileFragment;
+import com.smartwave.taskr.fragment.TaskSwipeFragment;
 
 public class InitialActivity extends ActionBarActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener, GoogleApiClient.ConnectionCallbacks {
 
@@ -139,7 +140,7 @@ public class InitialActivity extends ActionBarActivity implements GoogleApiClien
 
 
         if (savedInstanceState == null) {
-            selectItem(0);
+            selectItem(2);
         }
 
 
@@ -235,7 +236,12 @@ public class InitialActivity extends ActionBarActivity implements GoogleApiClien
             startActivity(intent);
         }
         else if (position == 2){
-            startActivity(new Intent(InitialActivity.this, TaskActivity.class));
+//            startActivity(new Intent(InitialActivity.this, TaskActivity.class));
+
+            Fragment fragment = new TaskSwipeFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.framelayout, fragment).commit();
+
         } else if (position == 3){
             if (google_api_client.isConnected()) {
                 Plus.AccountApi.clearDefaultAccount(google_api_client);
