@@ -32,6 +32,7 @@ import com.smartwave.taskr.core.BaseActivity;
 import com.smartwave.taskr.core.DBHandler;
 import com.smartwave.taskr.core.SharedPreferencesCore;
 import com.smartwave.taskr.fragment.ProfileFragment;
+import com.smartwave.taskr.fragment.TaskDetailsFragment;
 import com.smartwave.taskr.fragment.TaskSwipeFragment;
 
 public class InitialActivity extends ActionBarActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener, GoogleApiClient.ConnectionCallbacks {
@@ -231,9 +232,12 @@ public class InitialActivity extends ActionBarActivity implements GoogleApiClien
             fragmentManager.beginTransaction().replace(R.id.framelayout, fragment).commit();
         }
         if (position == 1){
-            Intent intent = new Intent(InitialActivity.this, MainActivity.class);
-            intent.putExtra("goto", "task_details");
-            startActivity(intent);
+//            Intent intent = new Intent(InitialActivity.this, MainActivity.class);
+//            intent.putExtra("goto", "task_details");
+//            startActivity(intent);
+            Fragment fragment = new TaskDetailsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.framelayout, fragment).commit();
         }
         else if (position == 2){
 //            startActivity(new Intent(InitialActivity.this, TaskActivity.class));

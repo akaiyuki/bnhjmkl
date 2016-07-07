@@ -23,7 +23,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/bluecircle"
             android:scaleType="fitXY" />
 
@@ -32,7 +32,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/user"
             android:scaleType="fitXY" />
 
@@ -42,9 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/photouser"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="25dp"
             android:text="sample"
             android:textSize="17sp"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
 
@@ -53,11 +54,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/username"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:drawableLeft="@drawable/ic_email"
             android:drawablePadding="10dp"
-            android:padding="10dp"
             android:text="sample@gmail.com"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp" />
 
 

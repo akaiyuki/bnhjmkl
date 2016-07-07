@@ -96,21 +96,21 @@ public class TaskDetailsFragment extends Fragment {
 
         final DBHandler db = new DBHandler(getActivity());
 
-         /* Initialize toolbar */
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.app_bar);
-        ((BaseActivity) getActivity()).setSupportActionBar(toolbar);
-        ((BaseActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-        ((BaseActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((BaseActivity) getActivity()).getSupportActionBar().setTitle("");
-
-        ImageView mImageSettings = (ImageView) toolbar.findViewById(R.id.settings);
-        mImageSettings.setVisibility(View.GONE);
-
-        TextView mTextLogout = (TextView) toolbar.findViewById(R.id.logout);
-        mTextLogout.setVisibility(View.GONE);
-
-        TextView mTextTitle = (TextView) toolbar.findViewById(R.id.titlename);
-        mTextTitle.setText("Tasks List");
+//         /* Initialize toolbar */
+//        Toolbar toolbar = (Toolbar) view.findViewById(R.id.app_bar);
+//        ((BaseActivity) getActivity()).setSupportActionBar(toolbar);
+//        ((BaseActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+//        ((BaseActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        ((BaseActivity) getActivity()).getSupportActionBar().setTitle("");
+//
+//        ImageView mImageSettings = (ImageView) toolbar.findViewById(R.id.settings);
+//        mImageSettings.setVisibility(View.GONE);
+//
+//        TextView mTextLogout = (TextView) toolbar.findViewById(R.id.logout);
+//        mTextLogout.setVisibility(View.GONE);
+//
+//        TextView mTextTitle = (TextView) toolbar.findViewById(R.id.titlename);
+//        mTextTitle.setText("Tasks List");
 
 
         final List<TaskObject> tasks = db.getAllTask();
@@ -284,8 +284,11 @@ public class TaskDetailsFragment extends Fragment {
                     TSingleton.setTaskId(String.valueOf(taskObject.getId()));
                     TSingleton.setTaskEstimate(taskObject.getTaskEstimate());
 
-                    Engine.switchFragment((BaseActivity) getActivity(), new TaskDescriptionFragment(), ((BaseActivity) getActivity()).getFrameLayout());
+//                    Engine.switchFragment((BaseActivity) getActivity(), new TaskDescriptionFragment(), ((BaseActivity) getActivity()).getFrameLayout());
 
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    intent.putExtra("goto","task_description");
+                    startActivity(intent);
 
                 }
             });
