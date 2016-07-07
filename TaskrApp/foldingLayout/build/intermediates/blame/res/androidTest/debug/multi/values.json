@@ -1,0 +1,134 @@
+[
+    {
+        "outputFile": "/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 160,
+                    "endColumn": 50,
+                    "endOffset": 206
+                },
+                "from": {
+                    "file": "/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 160,
+                        "endColumn": 50,
+                        "endOffset": 206
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 211,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 497
+                },
+                "from": {
+                    "file": "/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 211,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 497
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 502,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 657
+                },
+                "from": {
+                    "file": "/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 502,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 657
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/smartwavedev/Desktop/backup/SampleApp/foldingLayout/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 160,
+                    "endColumn": 50,
+                    "endOffset": 206
+                },
+                "from": {
+                    "file": "/Users/smartwavedev/Desktop/backup/SampleApp/foldingLayout/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 160,
+                        "endColumn": 50,
+                        "endOffset": 206
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 211,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 497
+                },
+                "from": {
+                    "file": "/Users/smartwavedev/Desktop/backup/SampleApp/foldingLayout/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 211,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 497
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 502,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 657
+                },
+                "from": {
+                    "file": "/Users/smartwavedev/Desktop/backup/SampleApp/foldingLayout/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 502,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 657
+                    }
+                }
+            }
+        ]
+    }
+]

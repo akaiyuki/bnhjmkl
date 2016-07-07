@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/src/main/assets"/><source path="/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/smartwavedev/Desktop/bnhjmkl/TaskrApp/foldingLayout/src/release/assets"/></dataSet></merger>

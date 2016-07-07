@@ -1,17 +1,23 @@
 package com.smartwave.taskr.activity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +42,10 @@ import com.smartwave.taskr.object.TaskObject;
 
 import java.io.InputStream;
 
+import eightbitlab.com.blurview.BlurView;
+import eightbitlab.com.blurview.RenderScriptBlur;
+import jp.wasabeef.blurry.Blurry;
+
 public class LoginActivity extends BaseActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener, GoogleApiClient.ConnectionCallbacks {
 
     public static LoginActivity INSTANCE = null;
@@ -52,6 +62,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
     public boolean is_signInBtn_clicked;
     private int request_code;
     ProgressDialog progress_dialog;
+    private ImageView mImageBg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +109,23 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
 
         }
 
+        mImageBg = (ImageView) findViewById(R.id.imagebackground);
+        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relative);
+
+//        Blurry.with(LoginActivity.this)
+//                .radius(25)
+//                .sampling(1)
+//                .color(Color.argb(66, 255, 255, 0))
+//                .async()
+//                .capture(relativeLayout)
+//                .into(mImageBg);
+
+
+        Blurry.with(LoginActivity.this)
+                .radius(25)
+                .sampling(2)
+                .async()
+                .onto((ViewGroup) findViewById(R.id.relative));
 
 
     }
@@ -171,7 +199,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
         // Update the UI after signin
 //        changeUI(true);
 
-        startActivity(new Intent(LoginActivity.this, TaskActivity.class));
+        startActivity(new Intent(LoginActivity.this, InitialActivity.class));
 
 
     }

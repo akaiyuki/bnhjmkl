@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+        <ImageView
+            android:id="@+id/imagebackground"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:background="@drawable/taskbg"/>
+
+
+
+
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"

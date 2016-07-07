@@ -6,4 +6,24 @@
 
     <string name="sign_out">Sign Out</string>
     <string name="disconnect">Disconnect</string>
+
+    <string-array name="num_of_folds_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="animal_array">
+        <item>Profile</item>
+        <item>View Tasks</item>
+        <item>Select Tasks</item>
+        <item>Log out</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
 </resources>

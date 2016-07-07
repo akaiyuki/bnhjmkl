@@ -60,8 +60,8 @@ public class TaskActivity extends BaseActivity implements GoogleApiClient.OnConn
          /* Initialize toolbar */
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Task List");
 
         google_api_client =  new GoogleApiClient.Builder(this)
@@ -74,6 +74,7 @@ public class TaskActivity extends BaseActivity implements GoogleApiClient.OnConn
         final DBHandler db = new DBHandler(this);
 
         ImageView mImageSettings = (ImageView) toolbar.findViewById(R.id.settings);
+        mImageSettings.setVisibility(View.GONE);
         mImageSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +92,7 @@ public class TaskActivity extends BaseActivity implements GoogleApiClient.OnConn
         });
 
         TextView mTextLogout = (TextView) toolbar.findViewById(R.id.logout);
+        mTextLogout.setVisibility(View.GONE);
         mTextLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
