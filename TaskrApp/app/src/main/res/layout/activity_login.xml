@@ -13,8 +13,7 @@
             android:id="@+id/imagebackground"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:scaleType="fitXY"
-            android:background="@drawable/taskbg"/>
+            android:scaleType="fitXY"/>
 
 
 
