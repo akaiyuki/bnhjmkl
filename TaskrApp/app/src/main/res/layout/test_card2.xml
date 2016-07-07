@@ -1,0 +1,130 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    android:gravity="center_horizontal"
+    android:padding="25dp"
+    card_view:cardCornerRadius="5dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <TextView
+                android:id="@+id/sample_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:gravity="center_horizontal"
+                android:text="Sample Text"
+                android:textColor="@color/colorText"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sample_text"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="Text"
+                android:textColor="@color/colorText"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/offer_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:src="@drawable/ticket_image" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorHighlight">
+
+
+            <ImageView
+                android:id="@+id/imglogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:src="@drawable/bluecircle" />
+
+            <TextView
+                android:id="@+id/textproject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imglogo"
+                android:padding="10dp"
+                android:text="Text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:text="Date"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/left_image"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:src="@drawable/backlog" />
+
+            <ImageView
+                android:id="@+id/right_image"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/offer_image"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:src="@drawable/inprog" />
+        </LinearLayout>
+        <!--<TextView-->
+        <!--android:id="@+id/sample_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Sample Text"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:textSize="20dp" />-->
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
