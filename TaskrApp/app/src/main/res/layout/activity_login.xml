@@ -175,8 +175,9 @@
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/taskerlogo" />
+        android:src="@drawable/taskerlogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
 
 
     <TextView
@@ -189,7 +190,20 @@
         android:textAllCaps="true"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:id="@+id/txttitle"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txttitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="A Simple Project Management System"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
 
 </RelativeLayout>
 
