@@ -27,6 +27,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.SignInButton;
@@ -47,6 +51,7 @@ import com.google.android.gms.plus.Plus;
 import com.smartwave.taskr.object.TaskObject;
 
 import java.io.InputStream;
+import java.util.HashMap;
 
 import eightbitlab.com.blurview.BlurView;
 import eightbitlab.com.blurview.RenderScriptBlur;
@@ -70,6 +75,11 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
     ProgressDialog progress_dialog;
     private ImageView mImageBg;
     private Bitmap bitmap;
+
+
+
+    private SliderLayout mDemoSlider;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +131,43 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
 
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.taskbg);
         Bitmap blurred = blurRenderScript(this,bitmap, 25);
-        mImageBg.setImageBitmap(blurred);
+//        mImageBg.setImageBitmap(blurred);
+
+
+        Drawable d = new BitmapDrawable(getResources(), blurred);
+
+        mDemoSlider = (SliderLayout)findViewById(R.id.slider);
+
+        HashMap<String,String> url_maps = new HashMap<String, String>();
+        url_maps.put("Taskr", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
+        url_maps.put("Do it", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
+        url_maps.put("Sample", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
+
+        HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
+        file_maps.put("Taskr",R.drawable.doneimage);
+        file_maps.put("Do it",R.drawable.tasktime);
+        file_maps.put("Sample",R.drawable.taskbg);
+
+        for(String name : file_maps.keySet()){
+            TextSliderView textSliderView = new TextSliderView(this);
+            // initialize a SliderLayout
+//            .image(file_maps.get(name))
+
+            textSliderView
+                    .image(file_maps.get(name))
+                    .setScaleType(BaseSliderView.ScaleType.Fit);
+
+            //add your extra information
+            textSliderView.bundle(new Bundle());
+            textSliderView.getBundle()
+                    .putString("extra",name);
+
+            mDemoSlider.addSlider(textSliderView);
+        }
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Stack);
+        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+        mDemoSlider.setDuration(4000);
 
 
     }
@@ -177,6 +223,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
         if (google_api_client.isConnected()) {
             google_api_client.disconnect();
         }
+        mDemoSlider.stopAutoCycle();
     }
 
     protected void onResume(){

@@ -56,4 +56,8 @@ dependencies {
     compile 'com.github.7heaven:CurtainSlidingMenu:22560479df'
     compile 'jp.wasabeef:blurry:2.0.2'
     compile 'com.eightbitlab:blurview:1.1.0'
+
+
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
 }
