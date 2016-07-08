@@ -57,7 +57,32 @@
             android:layout_marginTop="5dp"
             android:text="sample@gmail.com"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:id="@+id/txtemail"/>
+
+
+
+        <TextView
+            android:id="@+id/activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtemail"
+            android:layout_marginTop="25dp"
+            android:text="Activity"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"/>
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/activity"
+            android:layout_marginTop="10dp"/>
+
+
 
 
     </RelativeLayout>
