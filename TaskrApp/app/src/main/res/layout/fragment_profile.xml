@@ -55,8 +55,6 @@
             android:layout_below="@+id/username"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/ic_email"
-            android:drawablePadding="10dp"
             android:text="sample@gmail.com"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp" />
