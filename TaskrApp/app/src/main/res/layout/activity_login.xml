@@ -70,7 +70,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
 
     <LinearLayout
         android:id="@+id/sign_out_and_disconnect"
@@ -173,8 +175,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/taskerlogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"/>
@@ -203,7 +205,60 @@
         android:text="A Simple Project Management System"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
-        android:textStyle="italic"/>
+        android:textStyle="italic"
+        android:id="@+id/subtitle"/>
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/subtitle"
+        android:hint="Email"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:id="@+id/editemail"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/editemail"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:id="@+id/editpassword"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@+id/editpassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorBackground"
+        android:id="@+id/buttonlogin"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonlogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Or"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"/>
+
+
+
 
 </RelativeLayout>
 

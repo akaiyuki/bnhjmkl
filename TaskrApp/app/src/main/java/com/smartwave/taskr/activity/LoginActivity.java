@@ -155,7 +155,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
 
             textSliderView
                     .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit);
+                    .setScaleType(BaseSliderView.ScaleType.CenterCrop);
 
             //add your extra information
             textSliderView.bundle(new Bundle());
