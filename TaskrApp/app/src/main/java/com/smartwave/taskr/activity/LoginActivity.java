@@ -164,10 +164,10 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
 
             mDemoSlider.addSlider(textSliderView);
         }
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Stack);
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Fade);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(4000);
+        mDemoSlider.setDuration(3000);
 
 
     }
